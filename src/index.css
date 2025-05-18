@@ -74,6 +74,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -84,3 +88,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-blue-700 bg-clip-text text-transparent;
+}
+
