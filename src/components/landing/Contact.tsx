@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Discord, Mail } from "lucide-react";
+import { MessagesSquare, Mail } from "lucide-react";
 
 export function Contact() {
   return (
@@ -27,7 +27,7 @@ export function Contact() {
             <CardContent className="grid gap-6">
               <div className="flex items-center gap-4">
                 <Button variant="outline" className="h-12 w-12 p-0">
-                  <Discord className="h-6 w-6" />
+                  <MessagesSquare className="h-6 w-6" />
                 </Button>
                 <div>
                   <h3 className="font-medium">Join Our Discord</h3>

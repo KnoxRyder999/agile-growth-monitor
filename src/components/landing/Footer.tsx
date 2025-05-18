@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Discord } from "lucide-react";
+import { MessagesSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -14,7 +14,7 @@ export function Footer() {
           
           <div className="flex space-x-4 mb-6">
             <Button variant="outline" size="icon" className="rounded-full border-gray-700 text-gray-300 hover:text-white hover:border-gray-500">
-              <Discord className="h-5 w-5" />
+              <MessagesSquare className="h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -35,7 +35,7 @@ export function Footer() {
             <Link to="/#contact" className="text-gray-300 hover:text-white text-sm">Contact</Link>
             <div className="hidden md:block text-gray-600">|</div>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
-              <Discord className="h-4 w-4" />
+              <MessagesSquare className="h-4 w-4" />
               <span>Join Our Discord</span>
             </Button>
           </div>

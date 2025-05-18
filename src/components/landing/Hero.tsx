@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Discord, Mail } from "lucide-react";
+import { MessagesSquare } from "lucide-react";
 
 export function Hero() {
   return (
@@ -24,7 +24,7 @@ export function Hero() {
               variant="outline" 
               className="w-full sm:w-auto flex items-center gap-2"
             >
-              <Discord className="h-5 w-5" />
+              <MessagesSquare className="h-5 w-5" />
               <span>Join Our Discord</span>
             </Button>
           </div>
