@@ -26,7 +26,7 @@ export function Contact() {
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="flex items-center gap-4">
-                <Button variant="outline" className="h-12 w-12 p-0">
+                <Button variant="outline" className="h-12 w-12 p-0 hover:bg-white/20 hover:text-white hover:border-white transition-all">
                   <MessagesSquare className="h-6 w-6" />
                 </Button>
                 <div>
@@ -36,7 +36,7 @@ export function Contact() {
               </div>
               
               <div className="flex items-center gap-4">
-                <Button variant="outline" className="h-12 w-12 p-0">
+                <Button variant="outline" className="h-12 w-12 p-0 hover:bg-white/20 hover:text-white hover:border-white transition-all">
                   <Mail className="h-6 w-6" />
                 </Button>
                 <div>
@@ -78,7 +78,7 @@ export function Contact() {
                   <Input id="timeline" placeholder="Any constraints or budget ranges?" />
                 </div>
                 
-                <Button type="submit" className="mt-2">Submit Request</Button>
+                <Button type="submit" className="mt-2 hover-scale">Submit Request</Button>
               </form>
             </CardContent>
           </Card>

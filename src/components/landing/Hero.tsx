@@ -28,7 +28,7 @@ export function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="w-full sm:w-auto flex items-center gap-2 hover-scale"
+              className="w-full sm:w-auto flex items-center gap-2 hover-scale hover:bg-white/20 hover:text-white hover:border-white transition-all"
             >
               <MessagesSquare className="h-5 w-5" />
               <span>Join Our Discord</span>

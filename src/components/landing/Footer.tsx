@@ -13,7 +13,7 @@ export function Footer() {
           <p className="text-gray-400 mb-4">Custom FiveM Development</p>
           
           <div className="flex space-x-4 mb-6">
-            <Button variant="outline" size="icon" className="rounded-full border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 hover-scale">
+            <Button variant="outline" size="icon" className="rounded-full border-gray-700 text-gray-300 hover:text-white hover:border-white hover:bg-white/20 transition-all hover-scale">
               <MessagesSquare className="h-5 w-5" />
             </Button>
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
             <Link to="/#portfolio" className="text-gray-300 hover:text-white text-sm transition-colors">Our Work</Link>
             <Link to="/#contact" className="text-gray-300 hover:text-white text-sm transition-colors">Contact</Link>
             <div className="hidden md:block text-gray-600">|</div>
-            <Button variant="outline" size="sm" className="flex items-center gap-2 hover-scale">
+            <Button variant="outline" size="sm" className="flex items-center gap-2 hover-scale hover:bg-white/20 hover:text-white hover:border-white transition-all">
               <MessagesSquare className="h-4 w-4" />
               <span>Join Our Discord</span>
             </Button>

@@ -91,7 +91,7 @@ export function MainNav() {
             </Button>
             <Button 
               variant="outline" 
-              className="ml-2 flex items-center gap-2 border-gray-700 hover:bg-white/10 hover:text-white"
+              className="ml-2 flex items-center gap-2 border-gray-700 hover:bg-white/20 hover:text-white hover:border-white transition-all"
             >
               <MessagesSquare className="h-4 w-4" />
               <span>Join Discord</span>
