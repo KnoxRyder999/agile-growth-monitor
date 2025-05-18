@@ -63,6 +63,41 @@
   @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
 }
 
+/* Text shadow utility for GTA-style headers */
+.text-shadow-sm {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+/* GTA-style button styling */
+.gta-button-primary {
+  @apply bg-primary text-primary-foreground border-2 border-primary/80 shadow-[0_0_10px_rgba(66,153,225,0.5)];
+}
+
+.gta-button-outline {
+  @apply border-2 shadow-[0_0_10px_rgba(255,255,255,0.2)];
+}
+
+.gta-card {
+  @apply border-2 border-white/10 bg-black/60 backdrop-blur-md shadow-[0_5px_15px_rgba(0,0,0,0.35)];
+}
+
+/* GTA-style section styling */
+.gta-section {
+  @apply relative border-y border-white/10 bg-gradient-to-b from-black/80 to-black;
+}
+
+.gta-section-alt {
+  @apply relative border-y border-white/10 bg-gradient-to-b from-black to-black/80;
+}
+
 /* Animation utilities */
 @keyframes fade-in {
   from {

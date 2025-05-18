@@ -1,6 +1,8 @@
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useInView } from "react-intersection-observer";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -34,13 +36,29 @@ const projects = [
 ];
 
 export function Portfolio() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
   return (
-    <section id="portfolio" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="portfolio" className="py-20 gta-section">
+      <div className="container mx-auto px-6" ref={ref}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Work</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="max-w-3xl mx-auto text-lg mb-10">
+          <h2 className={cn(
+            "text-3xl font-bold mb-4 text-gradient text-shadow-md",
+            inView ? "animate-fade-in" : "opacity-0"
+          )}>
+            Our Work
+          </h2>
+          <div className={cn(
+            "w-20 h-1 bg-primary mx-auto mb-8",
+            inView ? "animate-scale-in animation-delay-100" : "opacity-0"
+          )}></div>
+          <p className={cn(
+            "max-w-3xl mx-auto text-lg mb-10 text-gray-200",
+            inView ? "animate-fade-in animation-delay-200" : "opacity-0"
+          )}>
             Here's a look at some of the projects we've worked on — from custom-coded scripts to immersive maps and modded UIs. 
             Quality, performance, and uniqueness are at the core of every build.
           </p>
@@ -48,7 +66,13 @@ export function Portfolio() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card 
+              key={index} 
+              className={cn(
+                "overflow-hidden gta-card hover:shadow-[0_0_15px_rgba(66,153,225,0.3)]",
+                inView ? `animate-fade-in animation-delay-${(index % 2 + 3) * 100}` : "opacity-0"
+              )}
+            >
               <div className="h-64 relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -56,22 +80,23 @@ export function Portfolio() {
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
                 <div className="absolute top-2 left-2">
-                  <span className="text-2xl bg-background rounded-full p-2 shadow-lg">
+                  <span className="text-2xl bg-background/80 backdrop-blur-sm rounded-full p-2 shadow-lg">
                     {project.icon}
                   </span>
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
               </div>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-shadow-sm">
                   {project.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{project.description}</p>
+                <p className="text-gray-200">{project.description}</p>
               </CardContent>
-              <CardFooter className="flex flex-wrap gap-2">
+              <CardFooter className="flex flex-wrap gap-2 border-t border-white/10 pt-4">
                 {project.tags.map((tag, i) => (
-                  <Badge key={i} variant="secondary">{tag}</Badge>
+                  <Badge key={i} variant="secondary" className="bg-white/10 hover:bg-primary/20 text-gray-200">{tag}</Badge>
                 ))}
               </CardFooter>
             </Card>

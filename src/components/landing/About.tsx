@@ -10,11 +10,11 @@ export function About() {
   });
   
   return (
-    <section id="about" className="py-20 bg-black">
+    <section id="about" className="py-20 bg-black gta-section">
       <div className="container mx-auto px-6" ref={ref}>
         <div className="text-center mb-12">
           <h2 className={cn(
-            "text-3xl font-bold mb-4 text-gradient",
+            "text-3xl font-bold mb-4 text-gradient text-shadow-md",
             inView ? "animate-fade-in" : "opacity-0"
           )}>
             About VortexBytes
@@ -27,7 +27,7 @@ export function About() {
         
         <div className="max-w-4xl mx-auto">
           <Card className={cn(
-            "glass-card",
+            "gta-card",
             inView ? "animate-fade-in animation-delay-200" : "opacity-0"
           )}>
             <CardContent className="p-8">
