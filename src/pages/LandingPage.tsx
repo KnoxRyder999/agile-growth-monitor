@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { MainNav } from "@/components/landing/MainNav";
 import { Hero } from "@/components/landing/Hero";
 import { About } from "@/components/landing/About";
 import { Services } from "@/components/landing/Services";
@@ -13,6 +13,7 @@ import { FAQ } from "@/components/landing/FAQ";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <MainNav />
       <Hero />
       <About />
       <Services />
